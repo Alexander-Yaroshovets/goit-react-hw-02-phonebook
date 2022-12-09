@@ -21,6 +21,7 @@ export class App extends React.Component {
       name,
       number,
     };
+
     this.setState(prevState => ({
       contacts: [contact, ...prevState.contacts],
     }));
@@ -33,6 +34,7 @@ export class App extends React.Component {
   getFilterdContact = () => {
     const { filter, contacts } = this.state;
     const normalizedFilter = filter.toLowerCase();
+
     return contacts.filter(contact =>
       contact.name.toLowerCase().includes(normalizedFilter)
     );
@@ -43,9 +45,9 @@ export class App extends React.Component {
       contacts: prevState.contacts.filter(contact => contact.id !== contactid),
     }));
   };
+
   render() {
     const { filter, contacts } = this.state;
-
     const filterdContacts = this.getFilterdContact();
 
     return (

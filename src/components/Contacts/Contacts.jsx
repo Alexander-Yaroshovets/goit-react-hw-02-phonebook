@@ -5,7 +5,6 @@ import {
   ContactButton,
   ContactItem,
 } from './Contacts.styled';
-
 import PropTypes from 'prop-types';
 
 export const Contacts = ({ contacts, title, deleteContact }) => {

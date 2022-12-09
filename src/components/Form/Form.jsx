@@ -15,25 +15,22 @@ export class Form extends React.Component {
   };
 
   handleInputChange = event => {
-
     const { name, value } = event.target;
-
     const { contacts } = this.props;
 
     contacts.find(contact => {
+
       if (contact.name.toLowerCase() === value.toLowerCase()) {
         console.log(alert(`${value} is olredy in contact`));
       }
+
       return this.setState({ [name]: value });
     });
   };
 
   handleSubmit = event => {
-
     event.preventDefault();
-
     this.props.onSubmit(this.state);
-
     this.reset();
   };
 
@@ -42,7 +39,6 @@ export class Form extends React.Component {
   };
 
   render() {
-
     const { number, name } = this.state;
 
     return (
@@ -82,6 +78,7 @@ export class Form extends React.Component {
         </ContactForm>
       </>
     );
+    
   }
 }
 

@@ -1,10 +1,8 @@
 import React from 'react';
-
 import PropTypes from 'prop-types';
-
 import { FilterInput, FilterLabel } from './Filter.stayled';
+
 export const Filter = ({ value, onChange }) => {
-  
   return (
     <FilterLabel>
       Find contacts by name
